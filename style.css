@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.toolbar {
+  display: flex;
+  background-color: #3c3a39;
+  height: 48;
+  justify-content: space-between;
+  color: white;
+  font-weight: 700;
+}
+
+.toolbar a {
+  width: 101px;
+  height: 44px;
+  padding: 10px 12px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  width: 40px;
+  margin-right: 24px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button img {
+  order: 0;
+  width: 35px;
+  flex-grow: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 8px;
+}
+
+.container > * {
+  box-sizing: border-box;
+}
+
+.container {
+  background: #1c1a19;
+}
+
+.container .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 590px;
+  background-image: url('images/Illustration.png');
+  background-repeat: no-repeat;
+  background-position: right bottom -30px;
+  padding: 120px 24px;
+  top: 92px;
+}
+
+.wrapper h1 {
+  margin: 6px 0;
+  font-family: 'Crete Round', serif;
+  font-style: normal;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 0.37;
+  color: #ff6b00;
+  font-weight: 400;
+}
+
+.wrapper h3 {
+  margin: 6px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  color: white;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  order: 1;
+}
+
+.description {
+  margin: 6px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: white;
+  flex: none;
+  order: 2;
+}
+
+.content2 {
+  width: 100%;
+  background: white;
+}
+
+.social-media {
+  margin-top: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  width: 200px;
+  color: #dbd8d7;
+  justify-content: space-between;
+}
+
+.social-media a {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  font-size: 25px;
+}
