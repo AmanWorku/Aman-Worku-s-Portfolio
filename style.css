@@ -21,9 +21,6 @@
   align-items: center;
   justify-content: center;
   margin-left: 12px;
-}
-
-.toolbar a {
   text-decoration: none;
   color: white;
 }
