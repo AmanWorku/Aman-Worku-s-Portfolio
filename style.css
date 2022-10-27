@@ -22,10 +22,12 @@
   justify-content: center;
   margin-left: 12px;
 }
-.toolbar a{
+
+.toolbar a {
   text-decoration: none;
   color: white;
 }
+
 nav {
   display: flex;
   justify-content: center;
