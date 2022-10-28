@@ -1,30 +1,35 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Aman-Worku's-Portfoli
+# Aman-Worku's-Portfolio
 
-> Description the project.
+> This is a simple portfolio made with basic HTML and CSS.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Major languages: 
+    HTML, CSS
+- Technologies used: 
+    Git, GitHub, Linters
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://amanworku.github.io/Aman-Worku-s-Portfolio/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
+# Prerequisites
+GIT
+Setup
+Open a terminal or a git bash in the desired directory and run 
 
+git clone https://github.com/AmanWorku/Aman-Worku-s-Portfolio.git</br> 
+cd Portfolio</br> 
+Open within an IDE</br> 
+Open with the live server</br> 
 
 ## Author
 
