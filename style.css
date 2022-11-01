@@ -1,8 +1,11 @@
-* {
+*, ::after, *::before {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+body{
+  width: 375px;
+}
 .toolbar {
   display: flex;
   background-color: #3c3a39;
@@ -10,12 +13,11 @@
   justify-content: space-between;
   color: white;
   font-weight: 700;
-  width: 100%;
+  width: inherit;
   position: fixed;
 }
 
 .toolbar a {
-  width: 101px;
   height: 44px;
   padding: 10px 12px;
   font-family: 'Roboto', sans-serif;
