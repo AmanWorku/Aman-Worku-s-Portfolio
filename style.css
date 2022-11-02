@@ -681,6 +681,7 @@ form button {
   }
 
   .describing-block p {
+    font-size: 20px;
     width: 448px;
   }
 
@@ -712,14 +713,16 @@ form button {
     width: 100%;
     margin-top: -320px;
     margin-bottom: -100px;
+    border: 2px solid red;
+    background-image: url(images/about-img.png);
+    background-position: 1120px 60px;
+    background-size: auto 450px;
+    background-repeat: no-repeat;
   }
 
   .about-cover {
-    width: 100%;
     margin-left: 142px;
-    background-image: url(images/about-img.png);
-    background-position: 670px 0;
-    background-size: auto 300px;
+    background-image: none;
   }
 
   .about-cover h2 {
@@ -734,7 +737,7 @@ form button {
   }
 
   .about hr {
-    width: 1040px;
+    width: 1556px;
     margin: 0 142px;
   }
 
