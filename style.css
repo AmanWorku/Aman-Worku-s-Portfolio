@@ -374,6 +374,8 @@ nav {
   color: #f55800;
   background: #fff5e1;
   border: 1px solid #f55800;
+  transform: translate(12px);
+  transition: all ease-in-out 0.25s;
 }
 
 .about-cover {
@@ -792,7 +794,9 @@ form button {
   form button {
     margin-left: -390px;
   }
-
+  form button:hover{
+    transform: scale(1.2);
+  }
   .contact {
     height: 600px;
   }
