@@ -33,6 +33,11 @@ body {
   color: white;
 }
 
+.toolbar a:hover{
+  transform: scale(0.7);
+}
+
+
 nav {
   display: flex;
   justify-content: center;
@@ -244,6 +249,7 @@ nav {
   color: #f55800;
   background: #fff5e1;
   border: 1px solid #f55800;
+
 }
 
 .cards {
