@@ -85,7 +85,7 @@ nav .menu-items {
 
 nav #close-btn {
   font-size: 2em;
-  color: #67798E;
+  color: #67798e;
   font-weight: bold;
   padding: 25px;
 }
@@ -624,6 +624,7 @@ form button:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0;
   }
 
   .block li {
