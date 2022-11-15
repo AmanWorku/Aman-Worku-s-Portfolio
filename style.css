@@ -13,7 +13,7 @@ body {
 .toolbar {
   display: flex;
   background-color: #3c3a39;
-  height: 48;
+  height: 48px;
   justify-content: space-between;
   color: white;
   font-weight: 700;
@@ -39,7 +39,54 @@ nav {
   align-items: center;
 }
 
-.button {
+nav .menu-items{
+  width: 375px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  background: #3C3A39;
+  transition: top 1s ease 0s;
+  display: none;
+}
+
+nav hr{
+  width: 90%;
+  color: #6F6C6B;
+  margin: auto;
+  height: 1px;
+}
+nav .menu-items  li{
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  align-content: flex-start;
+}
+nav .menu-items a{
+  margin: 15px 0;
+  padding-left: 15px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  display: flex;
+}
+
+nav .menu-items .close-btn {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+.menu-bar {
   display: flex;
   flex-direction: row;
   height: 40px;
@@ -48,16 +95,6 @@ nav {
   padding: 8px;
   justify-content: center;
   align-items: center;
-}
-
-.button img {
-  order: 0;
-  width: 35px;
-  flex-grow: none;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  border-radius: 8px;
 }
 
 .btn-links {
@@ -87,7 +124,7 @@ nav {
   font-style: normal;
   font-size: 56px;
   line-height: 64px;
-  letter-spacing: 0.37;
+  letter-spacing: 0.37px;
   color: #ff6b00;
   font-weight: 400;
 }
@@ -517,8 +554,15 @@ form button {
   border: none;
 }
 
+form button:hover {
+  color: #f55800;
+  background: #fff5e1;
+  border: 1px solid #f55800;
+}
+
 .contact .social-media {
   color: #505f79;
+  cursor: pointer;
 }
 
 .contact .line {
@@ -549,6 +593,9 @@ form button {
     height: 72px;
   }
 
+  .menu-items{
+    display: none;
+  }
   .toolbar a {
     margin-left: 142px;
     margin-top: 13px;
@@ -582,11 +629,16 @@ form button {
   }
 
   .btn-links ul li {
+    cursor: pointer;
     display: inline;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-size: 15px;
     line-height: 20px;
+  }
+
+  .menu-bar{
+    display: none;
   }
 
   .container {
@@ -636,6 +688,7 @@ form button {
   }
 
   .wrapper .social-media li {
+    cursor: pointer;
     width: 20px;
     height: 20px;
     display: block;
@@ -667,7 +720,7 @@ form button {
 
   .describing-block {
     font-size: 20px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 28px;
     margin-top: -35px;
   }
@@ -790,6 +843,7 @@ form button {
   }
 
   form button {
+    cursor: pointer;
     margin-left: -390px;
   }
 

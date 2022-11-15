@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter&family=Poppins&family=Roboto&display=swap"
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+
     <title>Aman Worku's Portfolio</title>
 </head>
 
@@ -19,9 +20,15 @@
     <header class="toolbar">
         <a href="#">Aman Worku</a>
         <nav>
-            <div class="button">
-                <i class="fa-solid fa-bars"></i>
+            <div class="menu-bar">
+                <i id="menu-bar" class="fa-solid fa-bars menu-bar"></i>
             </div>
+            <ul id="menu-items" class="menu-items">
+                <div id="close-btn" class="close-btn"><i class="fa fa-times"></i></div>
+                <li><a href="#">Portfolio</a></li><hr>
+                <li><a href="#">About</a></li><hr>
+                <li><a href="#">Contact</a></li><hr>
+            </ul>
             <div class="btn-links">
                 <ul>
                     <li>Portfolio</li>
@@ -233,5 +240,6 @@
 <span class="line"></span>
     </section>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
