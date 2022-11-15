@@ -85,7 +85,7 @@ nav .menu-items {
 
 nav #close-btn {
   font-size: 2em;
-  color: #67798E;
+  color: #67798e;
   font-weight: bold;
   padding: 25px;
 }
@@ -594,6 +594,12 @@ form button:hover {
   background-color: #dfe1e6;
 }
 
+/* Modal Style */
+
+.my-recent-works .desk-modal-container {
+  display: none;
+}
+
 /* Desktop version. */
 
 @media (min-width: 768px) {
@@ -869,5 +875,64 @@ form button:hover {
 
   .contact {
     height: 600px;
+  }
+
+  /* Modal Styles */
+
+  .my-recent-works .desk-modal-container {
+    width: 70%;
+    display: flex;
+  }
+
+  .desk-modal-container {
+    width: 100vh;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .mod-content {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .text-and-btn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-and-btn p {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #344563;
+  }
+
+  .btn-contain {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+  }
+
+  .btn-contain .btn-2 {
+    padding: 12px;
+    width: auto;
+    height: 48px;
+    display: flex;
+    gap: 16px;
+  }
+
+  .btn-contain img {
+    margin: 0;
+    padding: 0;
   }
 }
