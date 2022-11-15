@@ -867,9 +867,11 @@ form button:hover {
     cursor: pointer;
     margin-left: -390px;
   }
-  form button:hover{
+
+  form button:hover {
     transform: scale(1.2);
   }
+
   .contact {
     height: 600px;
   }
