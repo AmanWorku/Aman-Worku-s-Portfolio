@@ -614,6 +614,9 @@ form button:hover {
   width: 95%;
   display: flex;
   flex-direction: column;
+  max-width: 80%;
+  background: white;
+  padding: 24px;
 }
 
 .mod-content {
@@ -685,12 +688,6 @@ form button:hover {
   font-size: 2em;
   top: 20px;
   right: 20px;
-}
-
-.desk-modal {
-  max-width: 80%;
-  background: white;
-  padding: 24px;
 }
 
 .btn-2 .live-link,
