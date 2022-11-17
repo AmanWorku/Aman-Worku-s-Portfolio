@@ -597,7 +597,114 @@ form button:hover {
 /* Modal Style */
 
 .my-recent-works .desk-modal-container {
+  width: 100%;
   display: none;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  position: fixed;
+  backdrop-filter: blur(5px);
+}
+
+.desk-modal {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mod-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.text-and-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-and-btn p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #344563;
+}
+
+.btn-contain {
+  margin-top: 118px;
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+
+.btn-contain .btn-2 {
+  padding: 12px;
+  width: auto;
+  height: 48px;
+  display: flex;
+  gap: 16px;
+}
+
+.btn-contain .btn-2 i {
+  cursor: pointer;
+}
+
+.mod-img {
+  min-width: 40%;
+  height: auto;
+}
+
+.btn-contain img {
+  margin: 0;
+  padding: 0;
+}
+
+.mod-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: -13px;
+}
+
+.mod-title h2 {
+  font-size: 32px;
+  color: #172b4d;
+}
+
+.bl2 {
+  margin-bottom: 40px;
+}
+
+.desk-modal .close-btn2 {
+  font-size: 2em;
+  top: 20px;
+  right: 20px;
+}
+
+.desk-modal {
+  max-width: 80%;
+  background: white;
+  padding: 24px;
+}
+
+.btn-2 .live-link,
+.proj-link {
+  text-decoration: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.btn-2:hover a {
+  color: #f55800;
 }
 
 /* Desktop version. */
@@ -781,7 +888,13 @@ form button:hover {
 
   .card .tags {
     display: flex;
+    flex-direction: row;
     gap: 24px;
+  }
+
+  .card .tags li {
+    margin-right: 12px;
+    font-size: 15px;
   }
 
   .card .btn-2 {
@@ -880,20 +993,17 @@ form button:hover {
   /* Modal Styles */
 
   .my-recent-works .desk-modal-container {
-    width: 70%;
-    display: flex;
-  }
-
-  .desk-modal-container {
-    width: 100vh;
+    width: 100%;
+    display: none;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    background-attachment: fixed;
     top: 0;
     left: 0;
+    position: fixed;
+    backdrop-filter: blur(5px);
   }
 
   .mod-content {
@@ -917,10 +1027,11 @@ form button:hover {
   }
 
   .btn-contain {
-    margin-top: 64px;
+    margin-top: 118px;
     display: flex;
     flex-direction: row;
     gap: 7px;
+    align-items: flex-end;
   }
 
   .btn-contain .btn-2 {
@@ -931,8 +1042,54 @@ form button:hover {
     gap: 16px;
   }
 
+  .btn-contain .btn-2 i {
+    cursor: pointer;
+  }
+
   .btn-contain img {
     margin: 0;
     padding: 0;
+  }
+
+  .mod-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -13px;
+  }
+
+  .mod-title h2 {
+    font-size: 32px;
+    color: #172b4d;
+  }
+
+  .bl2 {
+    margin-bottom: 40px;
+  }
+
+  .desk-modal .close-btn2 {
+    font-size: 2em;
+    top: 20px;
+    right: 20px;
+  }
+
+  .desk-modal {
+    max-width: 80%;
+    background: white;
+    padding: 24px;
+  }
+
+  .btn-2 .live-link,
+  .proj-link {
+    text-decoration: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+
+  .btn-2:hover a {
+    color: #f55800;
   }
 }
