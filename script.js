@@ -166,12 +166,21 @@ for (let i = 0; i < projDetails.length; i++) {
             {
                 tech_lang = tech_lang + `<li>${projTech}</li>`;
             });
+<<<<<<< HEAD
             modalTitle.innerHTML = projDetails[i].projTitle;
             modalDesc.innerHTML = projDetails[i].projDesc;
             modalLanguages.innerHTML = tech_lang;
             modalImg.src = 'images/' + projDetails[i].projImg;
             modalLive.setAttribute("href", projDetails[i].liveLink);
             modalProj.setAttribute("href", projDetails[i].projLink);
+=======
+        modalTitle.innerHTML = projDetails[i].projTitle;
+        modalDesc.innerHTML = projDetails[i].projDesc;
+        modalLanguages.innerHTML = tech_lang;
+        modalImg.src = 'images/' + projDetails[i].projImg;
+        modalLive.setAttribute("href", projDetails[i].liveLink);
+        modalProj.setAttribute("href", projDetails[i].projLink);
+>>>>>>> 4db0b7171bdfad3d6f0ca0ff5112d14dd97793ad
 
             modal.style.display = 'flex';
         }
