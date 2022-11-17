@@ -188,3 +188,14 @@ let close_proj = document.querySelector(".close-btn2");
 close_proj.addEventListener("click", () =>{
     modal.style.display = 'none';
 })
+
+
+// Form validation
+
+function email_validator(){
+const EMAIL_INVALID = "Please enter a correct email address format";
+const email = document.getElementById('email').value;
+const emailRegx = /^([a-z\d-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+
+
+}
