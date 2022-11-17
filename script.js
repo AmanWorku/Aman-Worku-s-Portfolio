@@ -127,12 +127,7 @@ let projDetails = [
         projBg: 'url(\'images/cards-bg.png\')'
     }
 ];
-
-const card = document.querySelectorAll('.card');
-const cardTitle = document.querySelectorAll('.card-title');
-const cardLang = document.querySelectorAll('.languages')
-const cardDesc = document.querySelectorAll('.card-desc');
-const cardSeeProj = document.querySelectorAll('.see-proj-btn');
+const cards = document.querySelector('.cards');
 const modal = document.querySelector(".desk-modal-container");
 const modalTitle = document.querySelector('.mod-head-title');
 const modalLanguages = document.querySelector('.mod-languages')
@@ -141,18 +136,27 @@ const modalImg = document.querySelector('.mod-img');
 const modalLive = document.querySelector('.live-link');
 const modalProj = document.querySelector('.proj-link');
 
-card.innerHtml = '';
+cards.innerHTML = '';
 
 for (let i = 0; i < projDetails.length; i++){
-    cardTitle[i].innerHTML = projDetails[i].projTitle;
-    cardDesc[i].innerHTML = projDetails[i].projDesc;
+    
     let tech_lang = '';
     projDetails[i].projTech.forEach((projTech) =>
     {
         tech_lang = tech_lang + `<li>${projTech}</li>`;
     });
-    cardLang[i].innerHTML = tech_lang;
-    cardSeeProj[i].innerHTML = `<button class="btn-2 proj-mod-${i}">See Project</button>`;
+    
+    cards.innerHTML += `<div class="card">
+            <h4 class="card-title">${projDetails[i].projTitle}</h4>
+            <p class="card-desc">${projDetails[i].projDesc}</p>
+            <div class="tags">
+                <ul class="languages">
+                ${tech_lang}
+                </ul>
+            </div>
+            <div class="see-proj-btn"><button class="btn-2 proj-mod-${i}">See Project</button></div>
+        </div>`;
+    
 }
 
 //popup code
