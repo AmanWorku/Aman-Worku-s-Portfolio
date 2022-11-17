@@ -708,7 +708,6 @@ form button:hover {
 
 /* Desktop version. */
 
-
 @media (min-width: 768px) {
   body {
     width: 100%;
