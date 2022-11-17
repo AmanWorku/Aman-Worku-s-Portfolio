@@ -155,3 +155,32 @@ for (let i = 0; i < projDetails.length; i++){
     cardSeeProj[i].innerHTML = `<button class="btn-2 proj-mod-${i}">See Project</button>`;
 }
 
+//popup code
+
+
+for (let i = 0; i < projDetails.length; i++) {
+    document.querySelector(`.proj-mod-${i}`).addEventListener('click', () =>
+        {
+            let tech_lang = '';
+            projDetails[i].projTech.forEach((projTech) =>
+            {
+                tech_lang = tech_lang + `<li>${projTech}</li>`;
+            });
+        modalTitle.innerHTML = projDetails[i].projTitle;
+        modalDesc.innerHTML = projDetails[i].projDesc;
+        modalLanguages.innerHTML = tech_lang;
+        modalImg.src = 'images/' + projDetails[i].projImg;
+        modalLive.setAttribute("href", projDetails[i].liveLink);
+        modalProj.setAttribute("href", projDetails[i].projLink);
+
+            modal.style.display = 'flex';
+        }
+    )
+}
+
+// Pop up closing code
+
+let close_proj = document.querySelector(".close-btn2");
+close_proj.addEventListener("click", () =>{
+    modal.style.display = 'none';
+})
