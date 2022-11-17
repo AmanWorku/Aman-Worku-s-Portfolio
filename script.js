@@ -1,7 +1,7 @@
-let menu_items = document.querySelector('.menu-items');
-let close_btn = document.querySelector('.close-btn');
-let openMenu = document.querySelector( '.menu-bar');
-let menu_items2 = document.querySelectorAll('nav .menu-items li a');
+const menu_items = document.querySelector('.menu-items');
+const close_btn = document.querySelector('.close-btn');
+const openMenu = document.querySelector( '.menu-bar');
+const menu_items2 = document.querySelectorAll('nav .menu-items li a');
 
 openMenu.addEventListener('click',show);
 close_btn.addEventListener('click',close);
@@ -166,21 +166,12 @@ for (let i = 0; i < projDetails.length; i++) {
             {
                 tech_lang = tech_lang + `<li>${projTech}</li>`;
             });
-<<<<<<< HEAD
             modalTitle.innerHTML = projDetails[i].projTitle;
             modalDesc.innerHTML = projDetails[i].projDesc;
             modalLanguages.innerHTML = tech_lang;
             modalImg.src = 'images/' + projDetails[i].projImg;
             modalLive.setAttribute("href", projDetails[i].liveLink);
             modalProj.setAttribute("href", projDetails[i].projLink);
-=======
-        modalTitle.innerHTML = projDetails[i].projTitle;
-        modalDesc.innerHTML = projDetails[i].projDesc;
-        modalLanguages.innerHTML = tech_lang;
-        modalImg.src = 'images/' + projDetails[i].projImg;
-        modalLive.setAttribute("href", projDetails[i].liveLink);
-        modalProj.setAttribute("href", projDetails[i].projLink);
->>>>>>> 4db0b7171bdfad3d6f0ca0ff5112d14dd97793ad
 
             modal.style.display = 'flex';
         }

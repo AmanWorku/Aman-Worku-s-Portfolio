@@ -425,8 +425,6 @@ nav .menu-items .close-btn {
   color: #f55800;
   background: #fff5e1;
   border: 1px solid #f55800;
-  transform: translate(12px);
-  transition: all ease-in-out 0.25s;
 }
 
 .about-cover {
@@ -616,9 +614,6 @@ form button:hover {
   width: 95%;
   display: flex;
   flex-direction: column;
-  max-width: 80%;
-  background: white;
-  padding: 24px;
 }
 
 .mod-content {
@@ -692,6 +687,12 @@ form button:hover {
   right: 20px;
 }
 
+.desk-modal {
+  max-width: 80%;
+  background: white;
+  padding: 24px;
+}
+
 .btn-2 .live-link,
 .proj-link {
   text-decoration: none;
@@ -736,7 +737,6 @@ form button:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0;
   }
 
   .block li {
@@ -768,6 +768,11 @@ form button:hover {
   .btn-links ul li a {
     margin: 0;
     padding-left: 10px;
+  }
+
+  .fa-envelope {
+  margin-top: 13px;
+    font-size: 20px;
   }
 
   .menu-bar {
@@ -984,10 +989,6 @@ form button:hover {
   form button {
     cursor: pointer;
     margin-left: -390px;
-  }
-
-  form button:hover {
-    transform: scale(1.2);
   }
 
   .contact {
