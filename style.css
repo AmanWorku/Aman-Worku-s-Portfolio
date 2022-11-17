@@ -13,7 +13,7 @@ body {
 .toolbar {
   display: flex;
   background-color: #3c3a39;
-  height: 48;
+  height: 48px;
   justify-content: space-between;
   color: white;
   font-weight: 700;
@@ -39,7 +39,75 @@ nav {
   align-items: center;
 }
 
-.button {
+.social-media a {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  font-size: 25px;
+}
+
+nav .menu-items a {
+  margin: 15px 0;
+  padding-left: 15px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  display: flex;
+  text-align: left;
+}
+
+.menu-items,
+.menu-items li {
+  padding-left: 20px;
+  display: inline-block;
+  text-align: left;
+  color: #fff5e1;
+}
+
+nav .menu-items {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  padding-top: 80px;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  flex-direction: column;
+  background: #3c3a39;
+  transition: top 1s ease 0s;
+  margin: 0;
+  padding-left: 0;
+  display: none;
+}
+
+nav #close-btn {
+  font-size: 2em;
+  color: #67798e;
+  font-weight: bold;
+  padding: 25px;
+}
+
+nav hr {
+  color: #6f6c6b;
+  background-color: #6f6c6b;
+  width: 90%;
+  height: 1px;
+  margin: auto;
+  right: 0;
+  bottom: 0;
+}
+
+nav .menu-items .close-btn {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-bar {
   display: flex;
   flex-direction: row;
   height: 40px;
@@ -48,16 +116,6 @@ nav {
   padding: 8px;
   justify-content: center;
   align-items: center;
-}
-
-.button img {
-  order: 0;
-  width: 35px;
-  flex-grow: none;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  border-radius: 8px;
 }
 
 .btn-links {
@@ -87,7 +145,7 @@ nav {
   font-style: normal;
   font-size: 56px;
   line-height: 64px;
-  letter-spacing: 0.37;
+  letter-spacing: 0.37px;
   color: #ff6b00;
   font-weight: 400;
 }
@@ -136,13 +194,6 @@ nav {
 
 .social-media li {
   display: inline;
-}
-
-.social-media a {
-  width: 40px;
-  height: 40px;
-  padding: 8px;
-  font-size: 25px;
 }
 
 .my-recent-works {
@@ -519,8 +570,15 @@ form button {
   border: none;
 }
 
+form button:hover {
+  color: #f55800;
+  background: #fff5e1;
+  border: 1px solid #f55800;
+}
+
 .contact .social-media {
   color: #505f79;
+  cursor: pointer;
 }
 
 .contact .line {
@@ -549,6 +607,10 @@ form button {
     height: 72px;
   }
 
+  .menu-items {
+    display: none;
+  }
+
   .toolbar a {
     margin-left: 142px;
     margin-top: 13px;
@@ -562,6 +624,7 @@ form button {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0;
   }
 
   .block li {
@@ -582,11 +645,21 @@ form button {
   }
 
   .btn-links ul li {
+    cursor: pointer;
     display: inline;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-size: 15px;
     line-height: 20px;
+  }
+
+  .btn-links ul li a {
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .menu-bar {
+    display: none;
   }
 
   .container {
@@ -636,6 +709,7 @@ form button {
   }
 
   .wrapper .social-media li {
+    cursor: pointer;
     width: 20px;
     height: 20px;
     display: block;
@@ -667,7 +741,7 @@ form button {
 
   .describing-block {
     font-size: 20px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 28px;
     margin-top: -35px;
   }
@@ -790,11 +864,14 @@ form button {
   }
 
   form button {
+    cursor: pointer;
     margin-left: -390px;
   }
-  form button:hover{
+
+  form button:hover {
     transform: scale(1.2);
   }
+
   .contact {
     height: 600px;
   }

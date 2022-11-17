@@ -12,31 +12,38 @@
             href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter&family=Poppins&family=Roboto&display=swap"
             rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+
     <title>Aman Worku's Portfolio</title>
 </head>
 
 <body>
-<header class="toolbar">
-    <a href="#">Aman Worku</a>
-    <nav>
-        <div class="button">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="btn-links">
-            <ul>
-                <li>Portfolio</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li><i class="fa-regular fa-envelope"></i></li>
-            </ul>
-        </div>
-    </nav>
-</header>
-<section class="container">
-    <div class="wrapper">
-        <div class="headline">
-            <div class="intro-text">
-                <h1>Hey There. <br> I'm Aman</h1>
+    <header class="toolbar">
+        <a href="#">Aman Worku</a>
+        <nav>
+            <div class="menu-bar">
+                <i id="menu-bar" class="fa-solid fa-bars menu-bar"></i>
+            </div>
+            <ul id="menu-items" class="menu-items">
+                <div id="close-btn" class="close-btn"><i>&times;</i></div>
+                <li><a href="#portfolio">Portfolio</a></li><hr>
+                <li><a href="#about">About</a></li><hr>
+                <li><a href="#contact">Contact</a></li><hr>
+            </div>
+            <div class="btn-links">
+                <ul>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><i class="fa-regular fa-envelope"></i></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="wrapper">
+            <div class="headline">
+                <div class="intro-text">
+<h1>Hey There. <br> I'm Aman</h1>
                 <h3>I’am a Software Developer</h3>
                 <p class="description">I can help you build a product , feature or website Look through some of my work
                     and experience! If you like what you see and have a project you need coded,
@@ -52,10 +59,9 @@
                 </ul>
             </div>
         </div>
-    </div>
-</section>
-<section class="my-recent-works">
-    <div class="head-card">
+    </section>
+    <section id="portfolio" class="my-recent-works">
+        <div class="head-card">
         <div class="title">
             <h2>My Recent Works</h2>
             <hr>
@@ -145,23 +151,9 @@
             </div>
             <button class="btn-2">See Project</button>
         </div>
-        <div class="card">
-            <h4>Profesional Art Printing Data</h4>
-            <p>A daily selection of privately personalized reads; no accounts or sign-ups required. has been the
-                industry's standard</p>
-            <div class="tags">
-                <ul>
-                    <li>html</li>
-                    <li>bootstrap</li>
-                    <li>Ruby</li>
-                </ul>
-            </div>
-            <button class="btn-2">See Project</button>
-        </div>
-    </div>
-</section>
-<footer>
-    <section class="about">
+    </section>
+    <footer>
+    <section id="about" class="about">
         <div class="about-cover">
             <h2>About Me</h2>
             <p>Hello I’m a software developer! I can help you build a product , feature or website Look through some of
@@ -202,7 +194,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="contact-top">
             <div class="contact-message">
                 <h3>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h3>
@@ -232,6 +224,7 @@
         </div>
         <span class="line"></span>
     </section>
-</footer>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

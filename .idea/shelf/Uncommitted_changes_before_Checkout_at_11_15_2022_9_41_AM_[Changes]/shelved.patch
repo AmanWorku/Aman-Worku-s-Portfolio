@@ -1,0 +1,35 @@
+Index: script.js
+===================================================================
+diff --git a/script.js b/script.js
+--- a/script.js	
++++ b/script.js	
+@@ -1,0 +1,28 @@
++const mainMenu = document.querySelector('nav .btn-links');
++const closeMenu = document.querySelector('nav .closeMenu');
++const openMenu = document.querySelector('nav .button');
++const menu_items = document.querySelectorAll('nav .btn-links li a');
++
++
++openMenu.addEventListener("click", () => {
++    mainMenu.classList.toggle("active");
++    openMenu.classList.toggle("active");
++})
++
++// openMenu.addEventListener('click',show);
++// closeMenu.addEventListener('click',close);
++
++// close menu when you click on a menu item 
++// menu_items.forEach(item => {
++//     item.addEventListener('click',function(){
++//         close();
++//     })
++// })
++//
++// function show(){
++//     mainMenu.style.display = 'flex';
++//     mainMenu.style.top = '0';
++// }
++// function close(){
++//     mainMenu.style.top = '-100%';
++// }
+\ No newline at end of file
