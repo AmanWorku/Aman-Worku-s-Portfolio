@@ -1,26 +1,26 @@
-const menu_items = document.querySelector('.menu-items');
-const close_btn = document.querySelector('.close-btn');
+const menuItems = document.querySelector('.menu-items');
+const closeBtn = document.querySelector('.close-btn');
 const openMenu = document.querySelector('.menu-bar');
-const menu_items2 = document.querySelectorAll('nav .menu-items li a');
+const menuItems2 = document.querySelectorAll('nav .menu-items li a');
+
+function show() {
+  menuItems.style.display = 'block';
+  menuItems.style.top = '0';
+}
+
+function close() {
+  menuItems.style.top = '-100%';
+}
 
 openMenu.addEventListener('click', show);
-close_btn.addEventListener('click', close);
+closeBtn.addEventListener('click', close);
 
 // close menu when you click on a menu item
-menu_items2.forEach((item) => {
+menuItems2.forEach((item) => {
   item.addEventListener('click', () => {
     close();
   });
 });
-
-function show() {
-  menu_items.style.display = 'block';
-  menu_items.style.top = '0';
-}
-
-function close() {
-  menu_items.style.top = '-100%';
-}
 
 // Project arrays
 
@@ -38,26 +38,15 @@ const headImg = document.querySelector('.img-poster');
 const headDesc = document.querySelector('.head-desc');
 const headLanguages = document.querySelector('.head-languages');
 
-let tech_lang = '';
+let techLang = '';
 headProject.headLanguages.forEach((projTech) => {
-  tech_lang = `${tech_lang}<li>${projTech}</li>`;
+  techLang = `${techLang}<li>${projTech}</li>`;
 });
 
 headTitle.innerHTML = headProject.headTitle;
 headImg.src = `images/${headProject.headImg}`;
 headDesc.innerHTML = headProject.headDesc;
-headLanguages.innerHTML = tech_lang;
-
-document.querySelector('.describing-block .btn').addEventListener('click', () => {
-  modalTitle.innerHTML = headProject.headTitle;
-  modalDesc.innerHTML = headProject.headDesc;
-  modalLanguages.innerHTML = tech_lang;
-  modalImg.src = `images/${headProject.headImg}`;
-  modalLive.setAttribute('href', headProject.liveLink);
-  modalProj.setAttribute('href', headProject.projLink);
-
-  modal.style.display = 'flex';
-});
+headLanguages.innerHTML = techLang;
 
 const projDetails = [
   {
@@ -130,12 +119,23 @@ const modalImg = document.querySelector('.mod-img');
 const modalLive = document.querySelector('.live-link');
 const modalProj = document.querySelector('.proj-link');
 
+document.querySelector('.describing-block .btn').addEventListener('click', () => {
+  modalTitle.innerHTML = headProject.headTitle;
+  modalDesc.innerHTML = headProject.headDesc;
+  modalLanguages.innerHTML = techLang;
+  modalImg.src = `images/${headProject.headImg}`;
+  modalLive.setAttribute('href', headProject.liveLink);
+  modalProj.setAttribute('href', headProject.projLink);
+
+  modal.style.display = 'flex';
+});
+
 cards.innerHTML = '';
 
 for (let i = 0; i < projDetails.length; i++) {
-  let tech_lang = '';
+  let techLang = '';
   projDetails[i].projTech.forEach((projTech) => {
-    tech_lang = `${tech_lang}<li>${projTech}</li>`;
+    techLang = `${techLang}<li>${projTech}</li>`;
   });
 
   cards.innerHTML += `<div class="card">
@@ -143,7 +143,7 @@ for (let i = 0; i < projDetails.length; i++) {
             <p class="card-desc">${projDetails[i].projDesc}</p>
             <div class="tags">
                 <ul class="languages">
-                ${tech_lang}
+                ${techLang}
                 </ul>
             </div>
             <div class="see-proj-btn"><button class="btn-2 proj-mod-${i}">See Project</button></div>
@@ -154,13 +154,13 @@ for (let i = 0; i < projDetails.length; i++) {
 
 for (let i = 0; i < projDetails.length; i++) {
   document.querySelector(`.proj-mod-${i}`).addEventListener('click', () => {
-    let tech_lang = '';
+    let techLang = '';
     projDetails[i].projTech.forEach((projTech) => {
-      tech_lang = `${tech_lang}<li>${projTech}</li>`;
+      techLang = `${techLang}<li>${projTech}</li>`;
     });
     modalTitle.innerHTML = projDetails[i].projTitle;
     modalDesc.innerHTML = projDetails[i].projDesc;
-    modalLanguages.innerHTML = tech_lang;
+    modalLanguages.innerHTML = techLang;
     modalImg.src = `images/${projDetails[i].projImg}`;
     modalLive.setAttribute('href', projDetails[i].liveLink);
     modalProj.setAttribute('href', projDetails[i].projLink);
@@ -171,14 +171,14 @@ for (let i = 0; i < projDetails.length; i++) {
 
 // Pop up closing code
 
-const close_proj = document.querySelector('.close-btn2');
-close_proj.addEventListener('click', () => {
+const closeProj = document.querySelector('.close-btn2');
+closeProj.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 
 // Form validation
 
-function email_validator() {
+function emailValidator() {
   const EMAIL_INVALID = 'Please enter a correct email address format';
   const email = document.getElementById('email').value;
   const emailRegx = /^([a-z\d-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
